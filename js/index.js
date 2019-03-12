@@ -26,7 +26,7 @@ const siteContent = {
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
-  "contact": {
+    "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
@@ -43,12 +43,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.querySelectorAll('a');
 console.log(nav);
-// nav[0].textContent=siteContent.nav['nav-item-1'];
-// nav[1].textContent="Product";
-// nav[2].textContent="Vision";
-// nav[3].textContent="Features";
-// nav[4].textContent="About";
-// nav[5].textContent="Contact";
 
 nav.forEach(function(value, i){
   value.textContent=siteContent.nav[`nav-item-${i+1}`];
@@ -102,3 +96,18 @@ bottomContent[2].textContent=siteContent["main-content"]["vision-content"];
 let middleImg = document.querySelector("#middle-img");
 console.log(middleImg);
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contacth4 = document.querySelector(".contact h4");
+console.log(contacth4);
+contacth4.textContent = siteContent.contact["contact-h4"];
+
+let contact = document.querySelectorAll(".contact p");
+console.log("contact");
+contact[0].textContent=siteContent.contact["address"];
+
+contact[1].textContent=siteContent.contact["phone"];
+
+contact[2].textContent=siteContent.contact["email"];
+
+let footer = document.querySelector("footer p");
+footer.textContent=siteContent.footer["copyright"];
