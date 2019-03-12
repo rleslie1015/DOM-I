@@ -40,22 +40,22 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
+//create a selector for the nav
 let nav = document.querySelectorAll('a');
 console.log(nav);
-
+//this code loops through the siteContent object and assigns a value to each a
 nav.forEach(function(value, i){
   value.textContent=siteContent.nav[`nav-item-${i+1}`];
 });
-
+//this code creates a selector for the cta h1 and then assigns the objects value for h1
 let cta = document.querySelector('h1');
 console.log(cta);
 cta.textContent=siteContent.cta["h1"];
-
+//button
 let button = document.querySelector('button');
 console.log(button);
 button.textContent=siteContent.cta["button"];
-
+//this code creates a selector for the cta img and then updates the src attribute
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
@@ -111,3 +111,23 @@ contact[2].textContent=siteContent.contact["email"];
 
 let footer = document.querySelector("footer p");
 footer.textContent=siteContent.footer["copyright"];
+
+
+nav.forEach(function(value){
+  value.style.color="green";
+});
+
+let navItems = document.querySelector("nav");
+let newNavItem = document.createElement("a");
+console.log(newNavItem);
+navItems.appendChild(newNavItem);
+console.log(navItems);
+newNavItem.textContent = "Help";
+newNavItem.setAttribute('href', '#');
+newNavItem.setAttribute('style', 'color: green');
+
+let navItemFAQ = document.createElement("a");
+navItems.prepend(navItemFAQ);
+navItemFAQ.textContent="FAQ";
+navItemFAQ.setAttribute('href', '#');
+navItemFAQ.setAttribute('style', 'color: green');
