@@ -99,3 +99,6 @@ bottomContent[1].textContent=siteContent["main-content"]["product-content"];
 
 bottomContent[2].textContent=siteContent["main-content"]["vision-content"];
 
+let middleImg = document.querySelector("#middle-img");
+console.log(middleImg);
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
