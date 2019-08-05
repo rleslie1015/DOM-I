@@ -131,3 +131,7 @@ navItems.prepend(navItemFAQ);
 navItemFAQ.textContent="FAQ";
 navItemFAQ.setAttribute('href', '#');
 navItemFAQ.setAttribute('style', 'color: green');
+
+//stretch: update styles
+let header = document.querySelector("header");
+header.style.backgroundColor = "lightblue";
